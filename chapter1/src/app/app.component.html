@@ -1,0 +1,69 @@
+<!-- <div class="container">
+  Value of Count = {{counter}}
+
+  <button [style.height.px]="height" [style.width.px]="w" 
+  (click)="setDefault()">Click Me </button>
+  <input type="number" [(ngModel)]="height" /> 
+  <input type="number" [(ngModel)]="w" />
+  <p>Height of button is set to {{height}} and width is set to {{w}}</p>
+</div> -->
+
+<div class="container">
+  <h2 class="text-center text-info">{{title}}</h2>
+  <input type="text" class="form-control" placeholder="enter product name to search" [(ngModel)]='searchText' />
+  <hr/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products |productSearch:searchText">
+        <td>{{product.Id}}</td>
+        <td [style.color]="product.Color">{{product.Title | uppercase}}</td>
+        <td>{{product.Price | currency}}</td>
+        <td>{{product.Color}}</td>
+        <td>{{product.Quantity}}</td>
+        <td><button  class="btn btn-danger">Delete</button></td>
+        <td><button   class="btn btn-info">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of products |productSearch:searchText; track product.Id) {
+      <tr>
+        <td>{{product.Id}}</td>
+        <td [style.color]="product.Color">{{product.Title | uppercase}}</td>
+        <td>{{product.Price | currency}}</td>
+        <td>{{product.Color}}</td>
+        <td>{{product.Quantity}}</td>
+        <td><button  class="btn btn-danger">Delete</button></td>
+        <td><button   class="btn btn-info">Edit</button></td>
+      </tr>
+    }
+    @empty {
+      <tr>
+        <td colspan="6" class="text-center text-danger">No records found</td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
