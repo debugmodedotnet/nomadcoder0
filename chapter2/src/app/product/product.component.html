@@ -1,0 +1,10 @@
+
+<h2>Product</h2>
+<app-child1 [data]="data" [a]="a" [b]="b" 
+(showParentDivEvent)="showMessage($event)"></app-child1>
+@if(isMessage){
+    <h3>Display This</h3>
+}
+<button (click)="updateData()">Update Data</button>
+<hr/>
+<app-child2></app-child2>
