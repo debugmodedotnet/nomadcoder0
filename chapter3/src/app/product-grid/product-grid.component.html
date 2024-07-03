@@ -1,0 +1,19 @@
+
+
+<h2>Product Grid</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </tr>
+        @for (p of products; track $index) {
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+        }
+    </thead>
+</table>

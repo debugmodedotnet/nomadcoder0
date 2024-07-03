@@ -1,0 +1,11 @@
+
+<h2>Product List</h2>
+
+@for (p of products; track $index) {
+    <div>
+        <h3>{{p.name}}</h3>
+        <p>{{p.id}}</p>
+        <p>{{p.price}}</p>
+    </div>
+}
+

@@ -1,0 +1,8 @@
+
+
+<h2>Products</h2>
+
+<button (click)="changeMode()">Change</button>
+
+<app-product-grid *ngIf="!showList" [products]="products"></app-product-grid>
+<app-product-list *ngIf="showList" [products]="products"></app-product-list>
