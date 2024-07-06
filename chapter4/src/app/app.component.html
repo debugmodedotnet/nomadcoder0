@@ -1,0 +1,11 @@
+
+<h1>{{title}}</h1>
+<hr/>
+
+<h3>count = {{count()}} is {{isEven()?'Even':'Odd'}}</h3>
+<!-- <h2>isodd = {{isOdd()}}</h2> -->
+<button (click)="updateCount()">Update Count Signal</button>
+<button (click)="updateProduct()">Update Product</button>
+<hr/>
+<app-product></app-product>
+<app-product-edit></app-product-edit>
