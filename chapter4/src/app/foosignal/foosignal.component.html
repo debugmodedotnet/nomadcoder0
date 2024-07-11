@@ -1,0 +1,15 @@
+
+@if(product()){
+    <div>
+      <h3>Id:{{product().id}}</h3>
+      <h3>Name : {{product().name}}</h3>
+      <h3>Price : {{product().price}}</h3>
+
+    </div>
+}
+
+<h2>Count = {{count()}}</h2>
+<h1>Value  = {{value()}} is {{isCountEven()?"Even":"Odd"}}</h1>
+
+<button (click)="updateProduct()">Update Product</button>
+<button (click)="updateCount()">Update Count</button>

@@ -1,0 +1,31 @@
+
+<!-- <hr/>
+<h3>Count Child Component</h3>
+
+<hr/>
+
+@if( product != undefined )
+{
+    <div>
+    <div>Id: {{product.id}}</div>
+      <div>Name : {{product.name}}</div>
+      <div>Price : {{product.price}}</div>
+    </div>
+    <button (click)="notify(product)">send message to parent</button>
+} -->
+
+<hr/>
+<h3>Count Child Component</h3>
+
+<hr/>
+
+@if( product() != undefined )
+{
+    <div>
+    <div>Id: {{product()?.id}}</div>
+      <div>Name : {{product()?.name}}</div>
+      <div>Price : {{product()?.price}}</div>
+    </div>
+    <button (click)="notify(product())">send message to parent</button>
+}
+

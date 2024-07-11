@@ -1,11 +1,52 @@
 
-<h1>{{title}}</h1>
-<hr/>
 
-<h3>count = {{count()}} is {{isEven()?'Even':'Odd'}}</h3>
-<!-- <h2>isodd = {{isOdd()}}</h2> -->
+<!-- <h3>count = {{count()}} is {{isEven()?'Even':'Odd'}}</h3>
 <button (click)="updateCount()">Update Count Signal</button>
 <button (click)="updateProduct()">Update Product</button>
 <hr/>
 <app-product></app-product>
-<app-product-edit></app-product-edit>
+<app-product-edit></app-product-edit> -->
+
+
+<!-- <app-product-signal [product]="product" 
+(productChange)="onProductChange($event)"
+[product$]="product"
+(product$Change)="onProductChange1($event)"
+></app-product-signal>
+
+
+<app-psignal [value]="counter" />
+<button (click)="onIncrement()">Increment</button> -->
+
+<h1>{{title}}</h1>
+
+Parnet = {{p|json}}
+
+<!-- <app-countchild 
+[product]="product" 
+(productChange)="notify($event)"/> -->
+
+
+<!-- <app-countchild 
+[(product)]="product" 
+(productChange)="notify($event)">
+</app-countchild> -->
+
+<!-- <app-greetsignal 
+[count]="count" 
+ [product]="p"
+    (countChange)="notifyCount($event)"
+    (productChange)="notifyProduct($event)"
+ /> -->
+
+
+ <app-foosignal 
+ [product]="p" 
+ [count]="count" 
+ (productChange)="notifyProduct($event)" 
+ (countChange)="notifyCount($event)" 
+ [value]="value"
+ />
+
+ <button (click)="updateCount()">Update Parent Count</button>
+ <button (click)="updateValue()">Update Parent Value</button>

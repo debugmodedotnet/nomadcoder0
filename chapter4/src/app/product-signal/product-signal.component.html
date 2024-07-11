@@ -1,0 +1,21 @@
+
+<div *ngIf="product">
+    <h2>{{ product.name }}</h2>
+    <div>Price: {{ product.price| currency }}</div>
+    <div>
+      <label>Id:</label> {{ product.id }}
+    </div>
+
+    <button (click)="notify(product)">Notify</button>
+  </div>
+
+
+  <div *ngIf="product$()">
+    <h2>{{ product$()?.name }}</h2>
+    <div>Price: {{ product$()?.price| currency }}</div>
+    <div>
+      <label>Id:</label> {{ product$()?.id }}
+    </div>
+
+    <button (click)="notify1()">Notify1</button>
+  </div>

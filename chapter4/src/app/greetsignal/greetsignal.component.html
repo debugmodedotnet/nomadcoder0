@@ -1,0 +1,12 @@
+
+
+@if(product()){
+   <h2>{{product()?.id}}</h2>
+   <h2>{{product()?.name}}</h2>
+   <h2>{{product()?.price}}</h2>
+}
+
+Count = {{count()}}
+
+<button (click)="updateCount()">Update Count Signal</button>
+<button (click)="updateProduct()">Update Product</button>
